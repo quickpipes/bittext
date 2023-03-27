@@ -1,5 +1,6 @@
 # start from basic alpine python
 FROM python:3-alpine
+LABEL org.opencontainers.image.source = "https://github.com/quickpipes/bittext"
 
 EXPOSE 80
 RUN mkdir -p /bittext
