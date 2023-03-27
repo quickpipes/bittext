@@ -1,0 +1,17 @@
+version: "3"
+services:
+  bittext-app:
+    build: ./
+    container_name: "bittext-app"
+    working_dir: /bittext
+    restart: always
+  bittext-nginx:
+    image: "nginx:1-alpine"
+    container_name: "bittext-nginx"
+    links:
+      - "bittext-app:bittext-app.host"
+    ports:
+      - 8000:80
+    volumes:
+      - "./docker/default.conf:/etc/nginx/conf.d/default.conf:rw"
+    restart: always
