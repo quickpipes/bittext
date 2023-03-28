@@ -2,7 +2,7 @@
 FROM python:3-alpine
 LABEL org.opencontainers.image.source = "https://github.com/quickpipes/bittext"
 
-EXPOSE 80
+EXPOSE 5000
 RUN mkdir -p /bittext
 WORKDIR /bittext
 
