@@ -3,7 +3,7 @@
 Bittext is an object-storage-based text sharing application.
 Creating a bittext stores its content into an S3-compatible object-storage backend, attributing it a unique hash that is also used as its URI.
 
-Bittexts will be automatically deleted after one week.
+In a future release, we'll add a cron for Bittexts to be automatically deleted after one week.
 
 ## Running locally
 
@@ -32,4 +32,4 @@ To build the docker image, use
 $ docker build -t bittext:latest ./
 ```
 
-You can also use the `Makefile` targets to release the image.
+*The default uWSGI configuration for this application listens on port 5000*
