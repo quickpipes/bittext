@@ -1,5 +1,5 @@
 # start from basic alpine python
-FROM python:3-alpine
+FROM python:3.10-alpine
 LABEL org.opencontainers.image.source = "https://github.com/quickpipes/bittext"
 
 EXPOSE 5000
