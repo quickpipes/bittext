@@ -15,9 +15,8 @@ class S3Service:
         scaleway_secret_access_key = os.getenv("ACCESS_KEY")
         self.s3 = boto3.resource(
             "s3",
-            region_name=region_name,
             use_ssl=True,
-            endpoint_url=endpoint_url,
+            host=endpoint_url,
             aws_access_key_id=scaleway_access_key_id,
             aws_secret_access_key=scaleway_secret_access_key
         )
